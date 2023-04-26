@@ -1,11 +1,34 @@
+import styled from '@emotion/styled'
 import React from 'react'
+import DarkModeToggle from './components/DarkModeToggle'
+import { Header, Navbar } from '@mantine/core'
+
+const Container = styled.div`
+  margin: 0 auto;
+  width: 90%;
+`
 
 const App = () => {
   return (
-    <div>
-      <h1>template</h1>
-      <div>now build stuff</div>
-    </div>
+    <>
+      <Header
+        height={64}
+        sx={{
+          margin: '0',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '0 1rem',
+        }}
+      >
+        <div />
+        <DarkModeToggle />
+      </Header>
+      <Container>
+        <h1>Template</h1>
+        <div>now build stuff</div>
+      </Container>
+    </>
   )
 }
 
