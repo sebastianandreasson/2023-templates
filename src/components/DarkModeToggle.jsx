@@ -5,7 +5,7 @@ const DarkModeToggle = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme()
 
   return (
-    <Group position="center" my="xl">
+    <Group position="center">
       <ActionIcon
         onClick={() => toggleColorScheme()}
         size="lg"

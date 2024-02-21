@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import React from 'react'
 import DarkModeToggle from './components/DarkModeToggle'
-import { Header, Navbar } from '@mantine/core'
+import { AppShell, Flex } from '@mantine/core'
 
 const Container = styled.div`
   margin: 0 auto;
@@ -10,25 +10,17 @@ const Container = styled.div`
 
 const App = () => {
   return (
-    <>
-      <Header
-        height={64}
-        sx={{
-          margin: '0',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '0 1rem',
-        }}
-      >
-        <div />
-        <DarkModeToggle />
-      </Header>
+    <AppShell>
+      <AppShell.Header h={64} p={16}>
+        <Flex align="center" justify="end">
+          <DarkModeToggle />
+        </Flex>
+      </AppShell.Header>
       <Container>
         <h1>Template</h1>
         <div>now build stuff</div>
       </Container>
-    </>
+    </AppShell>
   )
 }
 
